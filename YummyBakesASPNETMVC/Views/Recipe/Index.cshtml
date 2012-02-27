@@ -1,0 +1,15 @@
+﻿@model List<YummyBakesASPNETMVC.Models.Recipe>
+@{
+    ViewBag.Title = "Yummy Bakes";    
+}
+<p class="intro">
+    From old favourites to new twists on modern classics, from sweet to savoury we've
+    got a recipe just for you!</p>
+<a href="@Url.Action("Find","Recipe")" data-role="button" data-icon="search" class="find-recipe-link">Find a recipe</a>
+<ul data-role="listview" data-divider-theme="e" class="recipe-list">
+    <li data-role="list-divider" class="list-divider">Top Recipes</li>
+    @foreach (var recipe in @Model)
+    {
+        Html.RenderPartial("RecipeListItem", recipe);
+    }
+</ul>

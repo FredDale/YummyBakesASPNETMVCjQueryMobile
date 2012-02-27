@@ -1,0 +1,8 @@
+﻿@model YummyBakesASPNETMVC.Models.Review
+<li>
+    <p class="rating @Model.RatingText">
+        "@Model.Title"</p>
+    <p class="review-author">
+        By @Model.Author on @Model.DatePublished.ToLongDateString()</p>
+    <p>@Model.Body</p>
+</li>

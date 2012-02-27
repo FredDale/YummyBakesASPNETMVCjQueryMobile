@@ -1,0 +1,10 @@
+﻿@model IEnumerable<YummyBakesASPNETMVC.Models.Review>
+<p class="review sprite">
+    Reviews
+</p>
+<ul class="reviews">
+    @foreach (var review in Model)
+    {
+        Html.RenderPartial("Review", review);
+    }
+</ul>

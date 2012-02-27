@@ -1,0 +1,14 @@
+﻿@model IEnumerable<YummyBakesASPNETMVC.Models.Recipe>
+
+@{
+    ViewBag.Title = "Find Recipes";
+}
+
+<div data-role="content">
+    <ul data-role="listview" data-filter="true" data-filter-placeholder="Find a recipe" class="recipe-list">
+        @foreach(var recipe in @Model)
+        {
+            Html.RenderPartial("RecipeListItem",recipe);
+        }
+    </ul>
+</div>

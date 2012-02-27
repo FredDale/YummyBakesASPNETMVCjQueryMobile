@@ -1,0 +1,198 @@
+/* Header styles */
+#header {
+text-align: center;
+}
+
+#header img {
+vertical-align: middle;
+}
+
+.header-text, .list-divider {
+color: #FF0000;
+}
+
+/* Intro text styles */
+.intro:first-child:first-letter {
+font-size: 60px;
+float: left;
+margin: 0px 2px 0 0;
+line-height: 0.8;
+text-shadow: 3px 3px 0 #566074, 2px 2px 0 #fff;
+}
+
+.intro {
+font-size: 15px;
+line-height: 50px;
+text-transform: uppercase;
+}
+
+/* Recipe List Styles */
+
+.recipe-list li:first-child {
+border-top: none;
+}
+
+.recipe-list p {
+white-space: normal;
+padding-right: 10px;
+}
+
+.recipe-list img {
+margin: 20px;
+}
+
+/* Recipe Detail Styles */
+.details ul, .details ol {
+padding-left: 30px;
+margin-top: 0;
+}
+
+.details li {
+padding-bottom: 10px;
+}
+
+.details ul li {
+list-style: square;
+}
+
+.details li:last-child {
+padding-bottom: 0px;
+}
+
+.details img {
+float: left;
+margin-right: 20px;
+}
+
+/* Recipe Icons */
+.clock {
+background-image: url("../Content/Images/clock.png");
+}
+
+.yield {
+background-image: url("../Content/Images/yield.png");
+}
+
+.ingredients {
+background-image: url("../Content/Images/ingredients.png");
+}
+
+.instructions {
+background-image: url('../Content/Images/instructions.png');
+}
+
+.nutrition {
+background-image: url('../Content/Images/nutrition.png');
+}
+
+.review {
+background-image: url('../Content/Images/review.png');
+}
+
+.sprite {
+background-repeat: no-repeat;
+padding-left: 30px;
+display: block;
+margin-top: 10px;
+}
+
+/* Find Recipes Styles */
+
+.find-recipe-link {
+margin-bottom: 30px;
+}
+
+.ui-bar-c {
+background: none;
+}
+
+/* Review */
+.details .reviews {
+padding-left: 0px;
+}
+
+.details .reviews li {
+border-bottom: 1px solid #333;
+margin-bottom: 20px;
+list-style: none;
+}
+
+.details .reviews li:last-child {
+border-bottom: none;
+margin-bottom: 0;
+}
+
+.rating {
+padding-left: 104px;
+background-image: url(../Content/Images/star-ratings.png);
+background-repeat: no-repeat;
+height: 16px;
+}
+
+.five {
+
+background-position: 0 -77px;
+}
+
+.four {
+
+background-position: 0 -60px;
+}
+
+.three {
+
+background-position: 0 -43px;
+}
+
+.two {
+
+background-position: 0 -28px;
+}
+
+.one {
+
+background-position: 0 -12px;
+}
+
+.ui-select .ui-icon, .ui-select .ui-icon-searchfield::after {
+background: none;
+}
+
+.ui-select .ui-icon-rating {
+background-image: url(../Content/Images/star.png);
+}
+
+.ui-collapsible-heading .ui-btn-text, .review-button .ui-btn-inner {
+color: #FF0000;
+}
+
+.review-form label.error {
+color: #FF0000;
+font-size: 16px;
+font-weight: normal;
+line-height: 1.4;
+margin-top: 0.5em;
+width: 100%;
+float: none;
+}
+
+.review-author {
+font-size: 0.8em;
+}
+
+.review-form em {
+color: #FF0000;
+font-weight: bold;
+padding-right: .25em;
+}
+
+/* Hr styles */
+hr {
+clear: both;
+}
+
+/* Link styles */
+a {
+text-decoration: none;
+color: #FFF;
+}

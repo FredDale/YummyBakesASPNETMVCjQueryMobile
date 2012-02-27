@@ -1,0 +1,10 @@
+﻿@model IEnumerable<YummyBakesASPNETMVC.Models.NutritionalFact>
+<p class="nutrition sprite">
+    Nutritional Facts
+</p>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Text</li>                      
+    }
+</ul>

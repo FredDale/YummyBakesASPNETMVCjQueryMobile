@@ -1,0 +1,11 @@
+﻿@model IEnumerable<YummyBakesASPNETMVC.Models.Instruction>
+
+<p class="instructions sprite">
+    Instructions
+</p>
+<ol class="recipe-instructions">
+    @foreach(var instruction in @Model.OrderBy(m => m.Step))
+    {
+        <li>@instruction.Text</li>
+    }
+</ol>
