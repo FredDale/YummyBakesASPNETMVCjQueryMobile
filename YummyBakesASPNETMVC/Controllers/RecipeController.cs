@@ -15,6 +15,7 @@ namespace YummyBakesASPNETMVC.Controllers
 
         public ActionResult Details(int id)
         {
+            ViewBag.PageId = "recipe-details";
             return View(SampleRecipes.Recipes.Single(r => r.Id == id));
         }
 

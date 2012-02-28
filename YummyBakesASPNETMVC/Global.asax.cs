@@ -43,6 +43,14 @@ namespace YummyBakesASPNETMVC
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 
+            var css = new Bundle("~/css", new CssMinify());
+            css.AddFile("~/Content/Site.css");
+            BundleTable.Bundles.Add(css);
+
+            var js = new Bundle("~/js", new JsMinify());
+            js.AddFile("~/Scripts/app.js");
+            BundleTable.Bundles.Add(js);
+
             BundleTable.Bundles.RegisterTemplateBundles();
         }
     }

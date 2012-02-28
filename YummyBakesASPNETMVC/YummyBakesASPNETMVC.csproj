@@ -151,6 +151,8 @@
     <Content Include="Content\Images\review.png" />
     <Content Include="Content\Images\star-ratings.png" />
     <Content Include="Content\Images\star.png" />
+    <Content Include="Content\Images\stars-large.png" />
+    <Content Include="Content\Images\stars-small.png" />
     <Content Include="Content\Images\swissroll_128.png" />
     <Content Include="Content\Images\swissroll_48.png" />
     <Content Include="Content\Images\yield.png" />
@@ -158,6 +160,7 @@
     <Content Include="Content\Site.css">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Scripts\app.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -172,7 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

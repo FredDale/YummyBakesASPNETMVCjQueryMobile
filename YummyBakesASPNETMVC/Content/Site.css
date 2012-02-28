@@ -122,44 +122,42 @@ border-bottom: none;
 margin-bottom: 0;
 }
 
-.rating {
-padding-left: 104px;
-background-image: url(../Content/Images/star-ratings.png);
-background-repeat: no-repeat;
-height: 16px;
+.starRating {
+    width: 250px;
 }
 
-.five {
-
-background-position: 0 -77px;
+.starRating span { 
+	width: 48px; 
+	height: 48px; 
+	background-image: url(../Content/Images/stars-large.png); 
+	display: inline-block; 
+	cursor: pointer; 
+	background-position: -48px 0;    
 }
 
-.four {
-
-background-position: 0 -60px;
+.starRating span.chosen { 
+	background-position: 0 0; 
+}
+.starRating:hover span { 
+	background-position: -48px 0; 
 }
 
-.three {
-
-background-position: 0 -43px;
+.starRating:hover span.hoverChosen { 
+	background-position: 0 0; 
 }
 
-.two {
-
-background-position: 0 -28px;
+.starRating-readonly span {
+	width: 12px; 
+	height: 12px; 
+	background-image: url(../Content/Images/stars-small.png); 
+	display: inline-block; 
+	cursor: pointer; 
+	background-position: -12px 0; 
 }
 
-.one {
-
-background-position: 0 -12px;
-}
-
-.ui-select .ui-icon, .ui-select .ui-icon-searchfield::after {
-background: none;
-}
-
-.ui-select .ui-icon-rating {
-background-image: url(../Content/Images/star.png);
+.starRating-readonly span.chosen
+{
+	background-position: 0 0; 
 }
 
 .ui-collapsible-heading .ui-btn-text, .review-button .ui-btn-inner {
@@ -174,6 +172,7 @@ line-height: 1.4;
 margin-top: 0.5em;
 width: 100%;
 float: none;
+display: block;
 }
 
 .review-author {

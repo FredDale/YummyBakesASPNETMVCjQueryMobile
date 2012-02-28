@@ -3,12 +3,12 @@
     ViewBag.Title = Model.Name + " Recipe";
 }
 <article class="details">
-    <div>
+    <header>
         <h2>
             @Model.Name</h2>
         <h3>
             @Model.Author</h3>
-    </div>
+    </header>
     <div>
         <img src="~/Content/Images/@Model.LargeImage" />
         <p>@Model.Description</p>
@@ -37,19 +37,13 @@
     <div data-role="collapsible" data-theme="e" class="review-collapsible">
         <h3>
             Add Review</h3>
-        <form class="review-form" action="#">
+        <form class="review-form" action="@Url.Action("AddReview", "Recipe")">
         <label for="name">
             Name:</label>
         <input type="text" name="name" id="name" value="" class="required" />
         <label for="rating" class="select">
             Rating:</label>
-        <select name="rating" id="rating" data-icon="rating">
-            <option value="5">5</option>
-            <option value="4">4</option>
-            <option value="3">3</option>
-            <option value="2">2</option>
-            <option value="1">1</option>
-        </select>
+        <div class="starRating"><span class="chosen"></span><span></span><span></span><span></span><span></span></div>
         <label for="name">
             Title:</label>
         <input type="text" name="title" id="title" value="" class="required" />
@@ -64,39 +58,4 @@
         </form>
     </div>
     <a href="@Model.FoodistaUrl" rel="nofollow">Link to Foodista Source</a>
-    <script type="text/javascript">
-        $(".review-form").validate({
-            submitHandler: function (form) {
-                var data = {
-                    RecipeId: $('#recipeId').val(),
-                    Author: $('#name').val(),
-                    Title: $('#title').val(),
-                    Rating: $('#rating').val(),
-                    Body: $('#review-body').val()
-                };
-
-                $.ajax({
-                    type: 'POST',
-                    url: '@Url.Action("AddReview", "Recipe")',
-                    data: data,
-                    success: function (result) {
-                        console.log('coll');
-                        $('.review-collapsible').trigger('collapse');
-                        console.log('reset');
-                        $(".review-form")[0].reset();
-                        $('.reviews').append(result);
-                    },
-                    error: function (request, status, error) {
-                        console.log(request.responseText);
-                        console.log(status);
-                        console.log(error);
-                    },
-                    complete: function () {
-                        $('.reviews').listview('refresh');
-                    }
-
-                });
-            }
-        });    
-    </script>
 </article>

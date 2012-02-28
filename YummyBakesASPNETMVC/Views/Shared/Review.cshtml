@@ -1,7 +1,13 @@
 ﻿@model YummyBakesASPNETMVC.Models.Review
 <li>
-    <p class="rating @Model.RatingText">
-        "@Model.Title"</p>
+    <p class="starRating-readonly">
+        @for(var i=0; i < 5; i++)
+        {
+            <span @if(Model.Rating > i){ <text>class="chosen"</text> }>
+            </span>
+        }
+        "@Model.Title"
+    </p>
     <p class="review-author">
         By @Model.Author on @Model.DatePublished.ToLongDateString()</p>
     <p>@Model.Body</p>
