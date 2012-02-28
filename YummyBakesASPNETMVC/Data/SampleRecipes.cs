@@ -55,7 +55,7 @@ namespace YummyBakesASPNETMVC.Data
             var recipe = new Recipe();
             recipe.Id = 1;
             recipe.Name = "Doughnuts";
-            recipe.Author = "Home Simpson";
+            recipe.Author = "Homer Simpson";
             recipe.Description = "Go nuts for doughnuts with this mothwatering recipe.";
             recipe.PrepTime = "15 minutes";
             recipe.CookTime = "3 minutes";
