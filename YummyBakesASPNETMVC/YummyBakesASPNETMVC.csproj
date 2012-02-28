@@ -149,7 +149,6 @@
     <Content Include="Content\Images\pumpkinpie_128.png" />
     <Content Include="Content\Images\pumpkinpie_48.png" />
     <Content Include="Content\Images\review.png" />
-    <Content Include="Content\Images\star-ratings.png" />
     <Content Include="Content\Images\star.png" />
     <Content Include="Content\Images\stars-large.png" />
     <Content Include="Content\Images\stars-small.png" />
