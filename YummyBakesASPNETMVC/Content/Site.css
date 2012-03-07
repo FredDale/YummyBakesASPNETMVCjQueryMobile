@@ -66,27 +66,33 @@ margin-right: 20px;
 
 /* Recipe Icons */
 .clock {
-background-image: url("../Content/Images/clock.png");
+    background-image: url("../Content/Images/recipe-sprite.png");
+    background-position: -10px -10px;
 }
 
 .yield {
-background-image: url("../Content/Images/yield.png");
+    background-image: url("../Content/Images/recipe-sprite.png");
+    background-position: -10px -47px;
 }
 
 .ingredients {
-background-image: url("../Content/Images/ingredients.png");
+    background-image: url("../Content/Images/recipe-sprite.png");
+    background-position: -10px -121px;
 }
 
 .instructions {
-background-image: url('../Content/Images/instructions.png');
+    background-image: url("../Content/Images/recipe-sprite.png");
+    background-position: -10px -158px;  
 }
 
 .nutrition {
-background-image: url('../Content/Images/nutrition.png');
+    background-image: url("../Content/Images/recipe-sprite.png");
+    background-position: -10px -84px;  
 }
 
 .review {
-background-image: url('../Content/Images/review.png');
+    background-image: url("../Content/Images/recipe-sprite.png");
+    background-position: -10px -195px;
 }
 
 .sprite {
@@ -123,7 +129,7 @@ margin-bottom: 0;
 }
 
 .starRating {
-    width: 250px;
+    width: 300px;
 }
 
 .starRating span { 
@@ -132,7 +138,8 @@ margin-bottom: 0;
 	background-image: url(../Content/Images/stars-large.png); 
 	display: inline-block; 
 	cursor: pointer; 
-	background-position: -48px 0;    
+	background-position: -48px 0;
+    margin-right: 10px;
 }
 
 .starRating span.chosen { 

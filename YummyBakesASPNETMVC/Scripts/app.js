@@ -1,6 +1,6 @@
 ﻿$('#recipe-details').live('pagecreate', function (event) {
     $(".review-form").validate({
-        submitHandler: function (form) {            
+        submitHandler: function (form) {
             var data = {
                 RecipeId: $('#recipeId').val(),
                 Author: $('#name').val(),
@@ -17,21 +17,21 @@
                     $('.review-collapsible').trigger('collapse');
                     $(".review-form")[0].reset();
                     $('.reviews').append(result);
+                    $('html, body').animate({
+                        scrollTop: $(".reviews li:last-child").offset().top
+                    }, 2000);
+                    $(".reviews li:last-child").animateHighlight();
                 },
                 error: function (request, status, error) {
                     console.log(request.responseText);
                     console.log(status);
                     console.log(error);
-                },
-                complete: function () {
-                    $('.reviews').listview('refresh');
                 }
-
             });
         }
     });
 
-    var element = $('.starRating');    
+    var element = $('.starRating');
     $("span", element).each(function () {
         $(this).hover(
 				function () { $(this).prevAll().add(this).addClass("hoverChosen", 750); },
@@ -43,4 +43,23 @@
 			    });
 			});
     });
+
+    $.fn.animateHighlight = function (highlightColor, duration) {
+        var highlightBg = highlightColor || "#FADC53";
+        var animateMs = duration || 800;
+        var originalBg = this.css("background-color");
+
+        if (!originalBg || originalBg == highlightBg)
+            originalBg = "#FFFFFF"; // default to white
+
+        $(this)
+            .css("backgroundColor", highlightBg)
+            .animate({ backgroundColor: originalBg }, animateMs, null, function () {
+                $(this).css("backgroundColor", originalBg);
+            });
+    };
 });
+
+
+
+
